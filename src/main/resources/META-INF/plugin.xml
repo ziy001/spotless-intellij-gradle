@@ -21,4 +21,8 @@
             <add-to-group group-id="CodeFormatGroup" relative-to-action="ReformatCode" anchor="before" />
         </action>
     </actions>
+    <applicationListeners>
+        <listener class="com.github.ragurney.spotless.SaveReformat"
+                  topic="com.intellij.openapi.vfs.newvfs.BulkFileListener"/>
+    </applicationListeners>
 </idea-plugin>

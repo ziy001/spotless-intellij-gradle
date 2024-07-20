@@ -3,6 +3,16 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 fun properties(key: String) = project.findProperty(key).toString()
 
+buildscript {
+    repositories {
+        maven {
+            url = uri("https://maven.aliyun.com/repository/public/")
+        }
+        gradlePluginPortal()
+        mavenLocal()
+        mavenCentral()
+    }
+}
 plugins {
     // Java support
     id("java")
